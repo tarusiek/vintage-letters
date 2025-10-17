@@ -1,0 +1,141 @@
+.unopened-letter {
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  padding: 40px;
+}
+
+.unopened-title {
+  font-family: 'Cinzel', serif;
+  font-size: 2.2em;
+  color: #8B4513;
+  margin-bottom: 10px;
+}
+
+.unopened-subtitle {
+  font-style: italic;
+  color: #a08c6d;
+  margin-bottom: 40px;
+  font-size: 1.1em;
+}
+
+.sealed-letter {
+  position: relative;
+  margin: 40px auto;
+  width: 200px;
+  height: 300px;
+  background: #f5f1e8;
+  border: 2px solid #d4c4a8;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  transition: all 0.5s ease;
+}
+
+.wax-seal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.wax-seal:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.letter-fold {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(135deg, transparent 50px, #e8dfd1 50px);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 50px, 50px 0);
+}
+
+.unwrapping .sealed-letter {
+  transform: scale(0.8);
+  opacity: 0;
+}
+
+.unwrap-button {
+  margin-top: 20px;
+}
+
+/* Opened letter styles */
+.letter-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d4c4a8;
+}
+
+.letter-topic {
+  font-family: 'Cinzel', serif;
+  font-size: 1.8em;
+  color: #8B4513;
+  margin-bottom: 10px;
+}
+
+.letter-date {
+  font-style: italic;
+  color: #a08c6d;
+}
+
+.letter-content {
+  margin-bottom: 40px;
+}
+
+.letter-paragraph {
+  margin-bottom: 20px;
+  text-align: justify;
+  font-size: 1.1em;
+  line-height: 1.8;
+}
+
+.letter-signature {
+  text-align: right;
+  margin-top: 60px;
+}
+
+.signature-line {
+  width: 200px;
+  height: 1px;
+  background: #5c4b37;
+  margin-left: auto;
+  margin-bottom: 10px;
+}
+
+.signature-text {
+  font-family: 'Cinzel', serif;
+  font-size: 1.2em;
+  color: #8B4513;
+  font-style: italic;
+}
+
+.loading, .error {
+  text-align: center;
+  font-size: 1.2em;
+  color: #5c4b37;
+  padding: 40px;
+}
+
+.error {
+  color: #8B0000;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .unopened-title {
+    font-size: 1.8em;
+  }
+  
+  .sealed-letter {
+    width: 150px;
+    height: 250px;
+  }
+  
+  .letter-topic {
+    font-size: 1.5em;
+  }
+}
